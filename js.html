@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="margin: 0px; padding: 0px">
+    <div
+      id="bg"
+      style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: red;
+        height: 100vh;
+      "
+    >
+      <button
+        id="start"
+        style="
+          font-size: 22px;
+          width: 300px;
+          height: 100px;
+          border: none;
+          border-radius: 20px;
+        "
+      >
+        start
+      </button>
+    </div>
+  </body>
+  <script>
+    document.getElementById("start").addEventListener("click", function () {
+      var r = Math.random() * 255;
+      var g = Math.random() * 255;
+      var b = Math.random() * 255;
+
+      var rb = Math.random() * 255;
+      var gb = Math.random() * 255;
+      var bb = Math.random() * 255;
+
+      document.getElementById("start").style.backgroundColor =
+        `rgb(${r},${g},${b})`;
+      document.getElementById("bg").style.backgroundColor =
+        `rgb(${rb},${gb},${bb})`;
+    });
+  </script>
+</html>
